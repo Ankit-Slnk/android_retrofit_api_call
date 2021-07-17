@@ -1,5 +1,6 @@
 package com.adfoodz.apidemo.api;
 
+import com.adfoodz.apidemo.models.CommonResponse;
 import com.adfoodz.apidemo.models.UserResponse;
 
 import java.util.Map;
@@ -20,4 +21,17 @@ public interface APIInterface {
     @GET("users")
     @Headers({"Accept: application/json"})
     Call<UserResponse> getUsers();
+
+//    @GET("apiName/{id}")
+//    @Headers({"Accept: application/json"})
+//    Call<CommonResponse> apiName(@Path("id") String id);
+
+//    @POST("apiName")
+//    @Headers({"Accept: application/json"})
+//    Call<CommonResponse> apiName(@Header("Authorization") String token, @Body CommonResponse request);
+
+    @Multipart
+    @POST("UploadProfilePic")
+    Call<CommonResponse> uploadProfilePhoto(@PartMap Map<String, RequestBody> map);
+
 }
