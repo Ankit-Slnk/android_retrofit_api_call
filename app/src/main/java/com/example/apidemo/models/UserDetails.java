@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.models;
+package com.example.apidemo.models;
 
 public class UserDetails {
     private int id;

@@ -1,7 +1,7 @@
-package com.adfoodz.apidemo.api;
+package com.example.apidemo.api;
 
-import com.adfoodz.apidemo.models.CommonResponse;
-import com.adfoodz.apidemo.models.UserResponse;
+import com.example.apidemo.models.CommonResponse;
+import com.example.apidemo.models.UserResponse;
 
 import java.util.Map;
 

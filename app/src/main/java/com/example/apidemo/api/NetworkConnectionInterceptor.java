@@ -1,4 +1,4 @@
-package com.adfoodz.partner.api;
+package com.example.apidemo.api;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

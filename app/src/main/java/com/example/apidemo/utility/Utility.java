@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.utility;
+package com.example.apidemo.utility;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -11,7 +11,7 @@ import android.util.Log;
 import android.util.Patterns;
 import android.widget.Toast;
 
-import com.adfoodz.apidemo.R;
+import com.example.apidemo.R;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -122,14 +122,14 @@ public class Utility {
         // To be safe, you should check that the SDCard is mounted
         // using Environment.getExternalStorageState() before doing this.
 
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "adfoodz");
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "example");
         // This location works best if you want the created images to be shared
         // between applications and persist after your app has been uninstalled.
 
         // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
-                Log.d("adfoodz", "failed to create directory");
+                Log.d("example", "failed to create directory");
                 return null;
             }
         }

@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo;
+package com.example.apidemo;
 
 import org.junit.Test;
 

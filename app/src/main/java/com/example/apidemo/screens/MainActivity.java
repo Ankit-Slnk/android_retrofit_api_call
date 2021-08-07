@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.screens;
+package com.example.apidemo.screens;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,13 +22,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.adfoodz.apidemo.R;
-import com.adfoodz.apidemo.api.APIClient;
-import com.adfoodz.apidemo.api.APIInterface;
-import com.adfoodz.apidemo.models.UserDetails;
-import com.adfoodz.apidemo.models.UserResponse;
-import com.adfoodz.apidemo.utility.GlideImageLoader;
-import com.adfoodz.apidemo.utility.Utility;
+import com.example.apidemo.R;
+import com.example.apidemo.api.APIClient;
+import com.example.apidemo.api.APIInterface;
+import com.example.apidemo.api.NoConnectivityException;
+import com.example.apidemo.models.UserDetails;
+import com.example.apidemo.models.UserResponse;
+import com.example.apidemo.utility.GlideImageLoader;
+import com.example.apidemo.utility.Utility;
 
 import java.util.List;
 
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                         if (swipeRefresh.isRefreshing())
                             swipeRefresh.setRefreshing(false);
                         Log.e("onFailure", t.toString() + "");
-                        if (t instanceof com.adfoodz.partner.api.NoConnectivityException) {
+                        if (t instanceof NoConnectivityException) {
                             Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                         call.cancel();

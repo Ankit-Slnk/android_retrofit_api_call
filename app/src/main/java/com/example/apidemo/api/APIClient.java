@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.api;
+package com.example.apidemo.api;
 
 import android.content.Context;
 
@@ -25,7 +25,7 @@ public class APIClient {
         httpClient.readTimeout(2000, TimeUnit.SECONDS);
         httpClient.writeTimeout(2000, TimeUnit.SECONDS);
         httpClient.addInterceptor(interceptor);
-        httpClient.addInterceptor(new com.adfoodz.partner.api.NetworkConnectionInterceptor(context));
+        httpClient.addInterceptor(new NetworkConnectionInterceptor(context));
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(url + "api/")

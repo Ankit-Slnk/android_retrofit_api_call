@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.models;
+package com.example.apidemo.models;
 
 public class CommonResponse {
     boolean status;

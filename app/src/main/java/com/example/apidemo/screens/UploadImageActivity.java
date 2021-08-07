@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.screens;
+package com.example.apidemo.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
@@ -18,12 +18,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.adfoodz.apidemo.R;
-import com.adfoodz.apidemo.api.APIClient;
-import com.adfoodz.apidemo.api.APIInterface;
-import com.adfoodz.apidemo.models.CommonResponse;
-import com.adfoodz.apidemo.utility.ImageCompressionAsyncTask;
-import com.adfoodz.apidemo.utility.Utility;
+import com.example.apidemo.R;
+import com.example.apidemo.api.APIClient;
+import com.example.apidemo.api.APIInterface;
+import com.example.apidemo.api.NoConnectivityException;
+import com.example.apidemo.models.CommonResponse;
+import com.example.apidemo.utility.ImageCompressionAsyncTask;
+import com.example.apidemo.utility.Utility;
 
 import java.io.File;
 import java.util.HashMap;
@@ -174,7 +175,7 @@ public class UploadImageActivity extends AppCompatActivity {
                     public void onFailure(Call<CommonResponse> call, Throwable t) {
 //                        llProgressBar.setVisibility(View.GONE);
                         Log.e("onFailure", t.toString() + "");
-                        if (t instanceof com.adfoodz.partner.api.NoConnectivityException) {
+                        if (t instanceof NoConnectivityException) {
                             Toast.makeText(UploadImageActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                         call.cancel();

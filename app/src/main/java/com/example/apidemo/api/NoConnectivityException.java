@@ -1,4 +1,4 @@
-package com.adfoodz.partner.api;
+package com.example.apidemo.api;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.adfoodz.apidemo.utility;
+package com.example.apidemo.utility;
 
 import android.graphics.drawable.Drawable;
 import android.view.View;
